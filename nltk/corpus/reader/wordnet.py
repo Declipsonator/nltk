@@ -2094,7 +2094,7 @@ class WordNetCorpusReader(CorpusReader):
                 form[: -len(old)] + new
                 for form in forms
                 for old, new in substitutions
-                if form.endswith(old)
+                if form.endswith(old.encode())
             ]
 
         def filter_forms(forms):
